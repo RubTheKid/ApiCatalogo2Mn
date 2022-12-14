@@ -10,5 +10,9 @@
         public DateTime DataCompra { get; set; }
         public int Estoque { get; set; }
 
+        //setting n:1 relationship
+        public int CategoriaId { get; set; }
+        public Categoria? Categoria { get; set; }
+
     }
 }
