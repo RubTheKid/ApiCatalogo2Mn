@@ -1,4 +1,6 @@
-﻿namespace ApiCatalogo2.Models
+﻿using System.Text.Json.Serialization;
+
+namespace ApiCatalogo2.Models
 {
     public class Produto
     {
@@ -12,6 +14,7 @@
 
         //setting n:1 relationship
         public int CategoriaId { get; set; }
+        [JsonIgnore]
         public Categoria? Categoria { get; set; }
 
     }
